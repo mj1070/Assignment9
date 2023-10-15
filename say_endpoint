@@ -1,0 +1,10 @@
+exports.handler = async (event) => {
+    const cheers = event.cheers; // Assuming your parameter is passed as an object with a "cheers" key
+    
+    if (cheers) {
+        const result = `Mandy says ${cheers}`;
+        return result;
+    } else {
+        return "Mandy says cheers"; // Return a default message if no "cheers" parameter is provided
+    }
+};
